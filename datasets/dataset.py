@@ -13,7 +13,6 @@ import io
 from torch.utils.data import Dataset
 
 from .utils import convert_examples_to_features, read_examples
-from util.box_ops import box_xyxy_to_cxcywh, box_cxcywh_to_xyxy
 from pytorch_pretrained_bert.tokenization import BertTokenizer
 from .transforms import PIL_TRANSFORMS
 
