@@ -322,6 +322,11 @@ class TensorDict(object):
     def __init__(self, tensor_dict):
         self.tensor_dict = tensor_dict
 
+    def to(self, device):
+        self.tensor_dict = {
+            k: v.to(device) for k, v in self.tensor_dict.items()
+        }
+
     def pin_memory(self):
         for k in self.tensor_dict:
             self.tensor_dict[k] = self.tensor_dict[k].pin_memory()
